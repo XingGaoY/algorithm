@@ -1,0 +1,26 @@
+# Max Flow Problem
+We have the following component:
+- a directed graph G, with vertices V and directed edges E;
+- a source vertex s\in V;
+- a sink vertex t\in V;
+- a nonnegative and integral capacity u_e for each edge e\in E;
+
+And therefore, we have two constraints:
+Capacity:
+  f_e\le u_e for every edige e\in E;
+Conservation:
+  for every vertex v other than s and t, amount of flow entering v = amount of flow exiting v;
+  
+## Naive Greedy Algorithm
+```
+init f_e = 0 for all e\in E
+repeat
+  search for an s-t path P such that f_e < u_e for every 
+  // O(|E|) time using BFS or DFS
+  if no such path then
+    halt with current flow {f_e}_{e\in E}
+  else
+    let \delta = min_{e\in P}(u_e-f_e)
+    for all edges e of P do
+      increase f_e by \delta
+```
