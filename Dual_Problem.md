@@ -39,5 +39,8 @@ upper bound to the solution of PLP in DLP maximization case). i.e. maximum flow 
 minimum cut.
 - **Strong Duality Theorem**: same feasible and finite optimum result if exist c^Tx* = b^Ty*.
 
+## Nonelinear case
+To be visited.
 ## Ref
--[Slideshare: primal and dual problem](https://www.slideshare.net/YashLad3/primal-and-dual-problem)
+- [Slideshare: primal and dual problem](https://www.slideshare.net/YashLad3/primal-and-dual-problem)
+- [WIKI: Duality](https://en.wikipedia.org/wiki/Duality_(optimization))
