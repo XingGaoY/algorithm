@@ -43,3 +43,6 @@ all edges. Loop V such passes. It is inefficient because always relaxes `V*E` ed
 - Queue Based Version: The only edges that could lead to a change in `distTo[]` are thos leaving a vertex whose `distTo[]` value changed in the previous pass. To keep such vertices, we use a FIFO queue to track them. Maintaining another two data structures:
   - A queue of vertices to be relaxed.
   - A vertex0index boolean array `onQ[]` that indicate which vertices are on the queue to avoid duplicates.
+
+## Ref
+[*Algorithms*](https://algs4.cs.princeton.edu/44sp/)
