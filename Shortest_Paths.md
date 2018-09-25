@@ -64,11 +64,15 @@ Notice that `i` here is a node at the middle of the path, not the end node.
 
 And summing up for all `t\in N` we obtain: ![Flow Conservation(1)](https://raw.githubusercontent.com/XingGaoY/algorithm/master/img/Flow%20Conservation(1).png)
 
-Thus we have the primal formulation:![Primal Formulation](https://raw.githubusercontent.com/XingGaoY/algorithm/master/img/Primal Formulation.png)
+Thus we have the primal formulation:![Primal Formulation](https://raw.githubusercontent.com/XingGaoY/algorithm/master/img/Primal%20Formulation.png)
 And it's a **Totally Unimodular** matrix, and the right hand sides of the constraints are all integer numbers.
 
 Therefore we have the guarantee that **every base solution of the continuous relaxation of P' has integer coordinates.** Then, we relax
-the integrality restrictions:![Primal Formulation](https://raw.githubusercontent.com/XingGaoY/algorithm/master/img/Primal Formulation(1).png)
+the integrality restrictions:![Primal Formulation](https://raw.githubusercontent.com/XingGaoY/algorithm/master/img/Primal%20Formulation(1).png)
+
+Then we have its dual problem: ![Dual Formulation](https://raw.githubusercontent.com/XingGaoY/algorithm/master/img/Primal%20Formulation.png)
+
+Observe that nothing change to variable y if we change all of them a constant number, so we can have `y_s = 0`
 
 ## Ref
 - [*Algorithms*](https://algs4.cs.princeton.edu/44sp/)
