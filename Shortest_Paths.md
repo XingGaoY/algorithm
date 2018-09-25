@@ -44,5 +44,26 @@ all edges. Loop V such passes. It is inefficient because always relaxes `V*E` ed
   - A queue of vertices to be relaxed.
   - A vertex0index boolean array `onQ[]` that indicate which vertices are on the queue to avoid duplicates.
 
+## Dual of SPP
+### Data
+- a digraph `D = (N, A)` with `|N| = n` nodes and `|A| = m` arcs;
+- a source node `s\in N`;
+- a cost function `c: A\to R`
+
+SPP: find all minimum cost paths from `s` to all nodes in `N`.
+### Bellman's Optimality Principle
+**Each optimal policy is made by optimal sub-policies.**
+And for SPP, we have: every shortest path from `s` to `t\in N` visiting `i\in N` is made by the shortest path from `s` to `i` and the shortest path from `i` to `t`.
+
+### Mathematical Function
+**Objective Function**: min. \sum_{i,j\in A}c_{ij}x_{ij}.(Here, the sum of the costs times the flow equals the sum of the distances.)
+**Constraints**:
+
+Flow conservation: ![Flow Conservation](). Notice that `i` here is a node at the middle of the path, not the end node.
+
+And summing up for all `t\in N` we obtain: ![Flow Conservation(1)]
+
+
 ## Ref
-[*Algorithms*](https://algs4.cs.princeton.edu/44sp/)
+- [*Algorithms*](https://algs4.cs.princeton.edu/44sp/)
+- [Shortest Path Dual](https://pdfs.semanticscholar.org/presentation/36ee/f917703238dffba7dd594379aea7c2b31066.pdf)
