@@ -31,7 +31,7 @@ finite `diatTo[]` value.
 
 - If it is edge-weighted DAG, we could do vertex relaxation with topological sorting, finish Dijsktra in linear time and able to 
 handle negative edge weights. And has ability to find longest paths.
-- Longest path: Single-source longest paths problem in edge-weighted DAGs. We can solve the single-source longest paths problems in edge-weighted DAGs by initializing the distTo[] values to negative infinity and switching the sense of the inequality in relax().
+- Longest path: Single-source longest paths problem in edge-weighted DAGs. We can solve the single-source longest paths problems in edge-weighted DAGs by initializing the `distTo[]` values to negative infinity and switching the sense of the inequality in `relax()`.
   - Critical path method: we consider the parallel precedence-constrained job, given jobs of specified durations to be completed, and has 
   to be proceed after certain work to be finished. We have as many processors as possible.
     - this problem could be solved by formulating it as a longest paths problem in an edge-weighted DAG.
@@ -59,10 +59,16 @@ And for SPP, we have: every shortest path from `s` to `t\in N` visiting `i\in N`
 **Objective Function**: min. \sum_{i,j\in A}c_{ij}x_{ij}.(Here, the sum of the costs times the flow equals the sum of the distances.)
 **Constraints**:
 
-Flow conservation: ![Flow Conservation](). Notice that `i` here is a node at the middle of the path, not the end node.
+Flow conservation: ![Flow Conservation](https://raw.githubusercontent.com/XingGaoY/algorithm/master/img/Flow%20Conservation.png). 
+Notice that `i` here is a node at the middle of the path, not the end node.
 
-And summing up for all `t\in N` we obtain: ![Flow Conservation(1)]
+And summing up for all `t\in N` we obtain: ![Flow Conservation(1)](https://raw.githubusercontent.com/XingGaoY/algorithm/master/img/Flow%20Conservation(1).png)
 
+Thus we have the primal formulation:![Primal Formulation](https://raw.githubusercontent.com/XingGaoY/algorithm/master/img/Primal Formulation.png)
+And it's a **Totally Unimodular** matrix, and the right hand sides of the constraints are all integer numbers.
+
+Therefore we have the guarantee that **every base solution of the continuous relaxation of P' has integer coordinates.** Then, we relax
+the integrality restrictions:![Primal Formulation](https://raw.githubusercontent.com/XingGaoY/algorithm/master/img/Primal Formulation(1).png)
 
 ## Ref
 - [*Algorithms*](https://algs4.cs.princeton.edu/44sp/)
