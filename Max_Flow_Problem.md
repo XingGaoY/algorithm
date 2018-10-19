@@ -51,3 +51,14 @@ FF algo maintains that every flow amount f_e is an integer, *every iteration of 
 by the current value of \delta， and \delta\ge 1 in every iteration*, since there is a finite amount of flow escape from the source, FF algo
 would terminate in some iteration.
 
+## Maximum-Flow/Minimum-Cut Theorem
+Capacity of an `cut(A, B)` is defined as `C(A, B) = \sum_{e\in\delta^+(A)}u_e` and minimum cut is one with the smallest capacity.
+
+**Theorem(Optimality Conditions for Max Flow):** Let `f` be a flow in a graph G. And we have equivalent:
+1. `f` is a maximum flow of `G`
+1. there is an `(s, t) - cut(A, B)` such that the value of `f` equals the capacity of `(A, B)`
+1. there is no `s-t` path with positive residual capacity in the residual network `G_f`
+
+- 2 implies 1:
+  1. We first claim: `value of f \le C(A, B)` . `f = \sum{e\in\delta^+(s)}f_e = \sum{e\in\delta^+(s)}f_e - \sum{e\in\delta^-(s)}f_e`. And conservation constrains state: `\sum{e\in\delta^+(v)}f_e - \sum{e\in\delta^+(v)}f_e = 0`. Adding the second equation to all the 
+  vertices of `A\{s}` to the first equation: `f = \sum_{v\in A}(\sum_{e\in\delta^+(v)}f_e - \sum_{e\in\delta^-(v)}f_e)`. And we consider this function with which category does the edge belong to: `A`, `B` or from `A` to `B`. Then we have: `f = \sum_{e\in\delta^-(A)}f_e - \sum_{e\in\delta^-(A)}f_e \le\sum_{e\in\delta^+(A)}u_e = C(A, B)`.
