@@ -42,7 +42,7 @@ def kruskal(graph, node_num):
         elif find_root(source)*find_root(dest) == 0:
             # one of them is in a cluster
             # set its root to the cluster
-            parent[dest] = parent[source]=p = max(parent[dest], parent[source])
+            parent[dest] = parent[source] = max(parent[dest], parent[source])
         else:   # different cluster
             min_no = min(find_root(dest), find_root(source))
             cluster[parent[source]] = cluster[parent[dest]] = min_no
