@@ -22,7 +22,7 @@ We let the nodes in a subtree direct to a root node, and set its no. Compare its
 - `std::fill_n(array, num, number)`: set `array[0:num]` to `number`(memset)
 - no local function in cpp, try lambda instead: [cppref](https://en.cppreference.com/w/cpp/language/lambda)
 - no for each in dynamic array as no iterator
-- could `push_back` value argument to vector?
+- could `push_back` non reference value argument to vector?
 - use `>>` to format read split with space instead of `scanf`, jaja
 ```cpp
     ifstream infile(filename);
