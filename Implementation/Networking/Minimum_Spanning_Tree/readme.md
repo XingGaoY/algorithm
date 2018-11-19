@@ -29,3 +29,8 @@ We let the nodes in a subtree direct to a root node, and set its no. Compare its
     while(infile>>a>>b)
         ...
 ```
+
+## rust
+- closure, need to know how to capture mutable
+- ways to manipulate string
+- **continue on rust-lang book**
