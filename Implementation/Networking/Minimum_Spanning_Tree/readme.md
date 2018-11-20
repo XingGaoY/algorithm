@@ -3,11 +3,11 @@ Need to track which subtree does a node in, and change all the node in the subtr
 So if save it as a list of each node with the subtree no. leads to O(n^2).  
 We let the nodes in a subtree direct to a root node, and set its no. Compare its no. to see if the root node in a same subtree, which is O(1).
 
-## python
+### python
 - `sorted()` automaticly sort the list of tuple/list with the first value
 - indent needed for docstring
 
-## cpp
+### cpp
 - The way to write constructor:
 ```cpp
     struct A{
@@ -30,7 +30,14 @@ We let the nodes in a subtree direct to a root node, and set its no. Compare its
         ...
 ```
 
-## rust
+### rust
 - closure, need to know how to capture mutable
 - ways to manipulate string
 - **continue on rust-lang book**
+
+## prim
+Priority heap to track distance from nodes outside of mst.  
+
+### python
+- `heapq` implementation of priority queue
+- `O(nlog(n))` for heappop, `O(mn)` for loop through all arcs for `n` times, and `O(n^2)` for heapify
