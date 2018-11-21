@@ -23,7 +23,7 @@ def prim(graph, node_num):
         node_idx = node[1]
         mst.append((pre[node_idx], node_idx))
         for arc in graph:
-            if arc[1] == node_idx or arc[2] == node_idx:
+            if node_idx in (arc[1], arc[2]):
                 update_node = arc[1]+arc[2]-node_idx
                 if arc[0] < nodes_list[update_node][0]:
                     pre[update_node] = node_idx

@@ -41,3 +41,8 @@ Priority heap to track distance from nodes outside of mst.
 ### python
 - `heapq` implementation of priority queue
 - `O(nlog(n))` for heappop, `O(mn)` for loop through all arcs for `n` times, and `O(n^2)` for heapify
+
+## cpp
+- `make_heap` is enough for implement a priority queue
+    - Write a `bool operater()` for `make_heap`
+- No parenthesis around type name of `new type[num]`
