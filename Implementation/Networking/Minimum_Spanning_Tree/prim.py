@@ -11,12 +11,17 @@ def prim(graph, node_num):
     total = 0
     mst = []
     dist = []
-    pre = [-1]*node_num
-    nodes_list = [[math.inf, x] for x in range(node_num)]
+
+    pre = [-1]*node_num     # record the node inside mst that is nearest
+    # record node in the heap with index
+    # nodes here is the same instance of the heap
+    # we could modify the dist here with the index order
+    nodes_list = [[math.inf, x] for x in range(node_num)]   
     for node in nodes_list:
         dist.append(node)
     nodes_list[0][0] = 0
     heapq.heapify(dist)
+
     while dist:
         node = heapq.heappop(dist)
         total += node[0]
@@ -25,9 +30,12 @@ def prim(graph, node_num):
         for arc in graph:
             if node_idx in (arc[1], arc[2]):
                 update_node = arc[1]+arc[2]-node_idx
+                # if the distance is smaller than before
+                # we update the distance and from which node inside the mst
                 if arc[0] < nodes_list[update_node][0]:
                     pre[update_node] = node_idx
                     nodes_list[update_node][0] = arc[0]
+        # keep the heap property of dist
         heapq.heapify(dist)
 
     return mst, total

@@ -78,7 +78,6 @@ int main(int argc, char** argv) {
 
     int total = prim(graph, mst, node_num);
 
-
     cout << "Total weight: " << total << endl;
     for (arc a : mst)
         cout << "{" << a.src << ", " << a.dest << ", " << a.weight << "}";
