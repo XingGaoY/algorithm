@@ -42,7 +42,14 @@ Priority heap to track distance from nodes outside of mst.
 - `heapq` implementation of priority queue
 - `O(nlog(n))` for heappop, `O(mn)` for loop through all arcs for `n` times, and `O(n^2)` for heapify
 
-## cpp
+### cpp
 - `make_heap` is enough for implement a priority queue
     - Write a `bool operater()` for `make_heap`
 - No parenthesis around type name of `new type[num]`
+
+### rust
+- crate [priority_queue](https://docs.rs/priority-queue/0.5.2/priority_queue/struct.PriorityQueue.html#method.get)
+- use `std::cmp::Reverse()` wrapper around object you want original comparison reverted, and `obj.0` to unwrap; (Option: crate: RevOrd)
+- **TODO** `#[derive()]`
+- [std::Option](https://doc.rust-lang.org/std/option/enum.Option.html), use `match` to extract safely
+- `Impl` to add trait to struct we write
