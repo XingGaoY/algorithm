@@ -3,7 +3,7 @@ Minimum spanning tree is a spanning tree that the sum of the weights of the edge
 
 And we have the lemma:
 
-    Let `T` in `A` be a subset of the arcs, and let `B` in `N` be a strict subset of the nodes, and assume that no arc in `T` leaves `B`. Assume that `T` is promising set of arcs for the MST in `(N, A)`. Let `a ` be the shortest arc shich leaves `B` in `A`,  and let `n_1` be its end node. Then `T+{a}` is promising.
+Let `T` in `A` be a subset of the arcs, and let `B` in `N` be a strict subset of the nodes, and assume that no arc in `T` leaves `B`. Assume that `T` is promising set of arcs for the MST in `(N, A)`. Let `a ` be the shortest arc shich leaves `B` in `A`,  and let `n_1` be its end node. Then `T+{a}` is promising.
 
 ## Kruskal
 Add arcs in increasing order of weight for the tree, as long as they do not form a cycle.  
