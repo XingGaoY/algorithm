@@ -12,5 +12,6 @@ Mostly in the order of EC732: Combinatorial Optimization and Graph Algorithms.
 1. [Matching](https://github.com/XingGaoY/algorithm/blob/master/Theory/Networking/Matching/)
     1. [Bipartite Matching](https://github.com/XingGaoY/algorithm/blob/master/Theory/Networking/Matching/Bipartite_Matching.md)
     1. [NonBipartite Matching](https://github.com/XingGaoY/algorithm/tree/master/Theory/Networking/Matching/NonBipartite_Matching.md)
-1. [Minimum Spanning Tree]()
-    1. Kruskal: [python](https://github.com/XingGaoY/algorithm/blob/master/Implementation/Networking/Minimum_Spanning_Tree/kruskal.py)  [c++](https://github.com/XingGaoY/algorithm/blob/master/Implementation/Networking/Minimum_Spanning_Tree/kruskal.cpp)    [rust](https://github.com/XingGaoY/algorithm/blob/master/Implementation/Networking/Minimum_Spanning_Tree/kruskal.rs)
+1. [Minimum Spanning Tree](https://github.com/XingGaoY/algorithm/blob/master/Networking/Minimum_Spanning_Tree/algorithm.md)
+    1. Kruskal: [python](https://github.com/XingGaoY/algorithm/blob/master/Networking/Minimum_Spanning_Tree/kruskal.py)  [c++](https://github.com/XingGaoY/algorithm/blob/master/Networking/Minimum_Spanning_Tree/kruskal.cpp)    [rust](https://github.com/XingGaoY/algorithm/blob/master/Networking/Minimum_Spanning_Tree/kruskal.rs)
+    1. Prim: [python](https://github.com/XingGaoY/algorithm/blob/master/Networking/Minimum_Spanning_Tree/prim.py)  [c++](https://github.com/XingGaoY/algorithm/blob/master/Networking/Minimum_Spanning_Tree/prim.cpp)    [rust](https://github.com/XingGaoY/algorithm/blob/master/Networking/Minimum_Spanning_Tree/prim.rs)
