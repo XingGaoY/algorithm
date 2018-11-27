@@ -76,4 +76,34 @@ A flower is a subgraph with two components:
 
 And every node in a blossom is reachable from the root through two distinct alternating paths, one has even length and the other has odd length. And the even path terminates with a matched arc, and odd vice versa.
 
-So when we find a blossom, we shrink it to a new node and label it even and then do the algorithm of bipartite matching
+So when we find a blossom, we shrink it to a new node and label it even and then do the algorithm of bipartite matching.
+
+And to preserve the property of augmenting path, we visit neighbors of odd vertex via matching edges only, and shrink vertices when we meet even-even edge only.
+```python
+## M here represent the former match arcs
+M
+## Set root at an unmatched node. Set its label even. Add it to a queue.
+if node.match = False:
+	node.label = Even;
+	lst.push_back(node);
+	
+	while !lst.is_empty():
+		p = lst.pop()
+		if p.label == even: 
+			for n in p.adjacent_nodes():
+				if n.label == even:	## we find a blossom
+					contract_blossom()
+				elif n.match == False: ## unmatched and odd label
+					return augment(n, node)
+				else:
+					n.label = odd
+					lst.push_back(n)	## label odd and add it to the list
+		else:
+			for n in p.adjacent_nodes():
+				if arc(p, n) in M:
+					if n.labeled = False:
+						n.label = even
+						lst.push_back(n)
+					else if n.label == odd:	## we find  a blossom
+						contract_blossom()
+```
